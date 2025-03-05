@@ -6,7 +6,7 @@
 }
 .front-para{
     height: 40px;
-    background-color: black; /* Change this to your desired color */
+    background-color: black; 
     color: white;
     font-size: medium;
     font-family: 'Times New Roman', Times, serif;
@@ -32,7 +32,7 @@
 }
 .logo {
     position: relative;
-    background-color: white; /* Optional: Add background color to avoid overlap */
+    background-color: white; 
 }
 
 .logo a{
@@ -53,31 +53,30 @@
 .menubar {
 
     display: flex;
-    align-items: flex-start; /* Align items to the top */
-    position: absolute;
+    align-items: flex-start; 
     height: 170px;
     margin-left: 30px;
     margin-top: 1px;
 }
 .menubar i {
-    font-size: 24px; /* Adjust the size of the menu icon */
+    font-size: 24px; 
     cursor: pointer;
     display: flex;
     align-items: center;
 }
 .menubar nav ul {
     list-style: none;
-    display: none; /* Hide the menu items by default */
+    display: none; 
     gap: 20px;
     position: absolute;
-    top: 100%; /* Position the menu items below the menubar */
+    top: 100%; 
     left: 0;
-    background-color: white; /* Set background color for the dropdown */
+    background-color: white; 
     padding: 10px;
-    border: 1px solid #ccc; /* Optional: Add border to the dropdown */
+    border: 1px solid #ccc; 
 }
 .menubar:hover nav ul {
-    display: flex; /* Show the menu items on hover */
+    display: flex; 
 }
 .menubar nav ul li {
     display: inline;
