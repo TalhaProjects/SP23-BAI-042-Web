@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+#checkoutForm{
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  label {
+    display: block;
+    margin-top: 15px;
+  }
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  .error {
+    color: red;
+    font-size: 0.9em;
+  }
+  input.invalid {
+    border: 2px solid red;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 15px;
+  }
+  h2{
+    text-align: center;
+    
+   
+
+  }
