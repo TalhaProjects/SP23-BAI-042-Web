@@ -1,0 +1,89 @@
+<%- include('announcement') %>
+    <header class="site-header">
+        <button class="btn  bg-white  menu-button" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMenu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="logo-container">
+            <a href="/">
+                <img src="/logo.jpg" alt="DAKS" class="daks-logo">
+            </a>
+        </div>
+        <a href="/cart" class="btn bg-white menu-button">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+
+        <div class="offcanvas offcanvas-start mt-4 g-3" tabindex="-1" id="offcanvasMenu">
+            <div class="offcanvas-header py-0 ">
+                <h5 class="offcanvas-title">Daks</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body canvas bg-white g-3">
+                <div class="menu">
+
+                    <!-- Main expandable menu items -->
+                    <div class="menu-item">DAKS <span class="toggle">+</span></div>
+                    <div class="item2">Our History</div>
+
+                    <div class="menu-item">CAMPAIGNS <span class="toggle">+</span></div>
+                    <div class="item2">Our History</div>
+
+                    <div class="menu-item">MODERN CLASSICS <span class="toggle">+</span></div>
+                    <div class="item2">Our History</div>
+
+                    <div class="menu-item">DAKS X JOHN SMEDLEY <span class="toggle">+</span></div>
+                    <div class="item2">Our History</div>
+
+                    <div class="menu-item">SALE MENSWEAR <span class="toggle">+</span></div>
+                    <div class="item2">Our History</div>
+
+                    <div class="menu-item">SALE WOMENSWEAR <span class="toggle">+</span></div>
+                    <div class="item2">Our History</div>
+
+                    <!-- Non-clickable/disabled section -->
+                    <div class="menu-item disabled ">MEMORY LANE</div>
+
+                    <!-- Regular links -->
+                    <div class="menu-item">
+                        <a href="/product">Product</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="/about_us">About us</a>
+                    </div>
+
+                    <br>
+                    <!-- Account/Search section -->
+                    <% if (typeof user !=='undefined' && user) { %>
+                        <div class="menu-item">
+                            <span>Welcome, <%= user.username %></span>
+                        </div>
+                        <div class="menu-item">
+                            <a href="/logout">Logout</a>
+                        </div>
+                        <% } else { %>
+                            <div class="menu-item">
+                                <a href="/login">Account</a>
+                            </div>
+
+                            <% } %>
+                                <div class="menu-item disabled">Search</div>
+                                <br>
+                                <!-- Social links -->
+                                <div class="social-links">
+                                    <a href="#" class="social-icon">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                    <p class="text-center text-dark mt-4">@Daks</p>
+                                </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>

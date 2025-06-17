@@ -1,0 +1,81 @@
+<div class="edit-product-container">
+  <h2>Edit Product</h2>
+
+  <form action="/admin/products/edit/<%= product._id %>" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name" value="<%= product.name %>" required>
+
+    <label>Price:</label>
+    <input type="number" name="price" value="<%= product.price %>" required>
+
+    <label>Description:</label>
+    <textarea name="description" required><%= product.description %></textarea>
+
+    <label>Image URL:</label>
+    <input type="text" name="image" value="<%= product.image %>" required>
+
+    <button type="submit">Update Product</button>
+  </form>
+</div>
+
+  <style>
+.edit-product-container {
+  max-width: 600px;
+  margin: 140px auto 40px;
+  padding: 30px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.edit-product-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #333;
+}
+
+.edit-product-container label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.edit-product-container input[type="text"],
+.edit-product-container input[type="number"],
+.edit-product-container textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fdfdfd;
+}
+
+.edit-product-container textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.edit-product-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.edit-product-container button:hover {
+  background-color: #333;
+}
+
+    
+
+    
+  </style>
+
