@@ -1,0 +1,14 @@
+<div class="complaints-table-container">
+<h2>My Complaints</h2>
+<ul>
+    <% complaints.forEach(complaint => { %>
+        <li>
+            <strong>Order ID:</strong> <%= complaint.orderId %><br>
+            <strong>Message:</strong> <%= complaint.message %><br>
+            <small><%= complaint.createdAt.toLocaleString() %></small>
+        </li>
+        <hr>
+    <% }) %>
+</ul>
+</div>
+<link rel="stylesheet" href="/complaint.css">
