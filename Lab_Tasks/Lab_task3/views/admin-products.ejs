@@ -1,0 +1,27 @@
+<!-- Link to your stylesheet -->
+<link rel="stylesheet" href="/show_product.css">
+
+<!-- Page content wrapper -->
+<div class="page-content">
+    <div class="product-container">
+        <h1>Product List</h1>
+        <a class="add-link" href="/admin/products/add">Add New Product</a>
+        <ul>
+            <% products.forEach(p => { %>
+                <li>
+                    <div class="product-details">
+                        <strong><%= p.name %></strong> - <%= p.price %>
+                    </div>
+                    <div class="product-actions">
+                        <a href="/admin/products/<%= p._id %>">View</a>
+                        <form action="/admin/products/delete/<%= p._id %>" method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</div>
+
+
