@@ -1,0 +1,45 @@
+<div class="checkout-container" >
+  <h2>Checkout Page</h2>
+     <form id="checkoutForm"  method="post" action="/CartClear"  novalidate>
+        <label>Full Name:
+        <input type="text" id="fullName" name="fullName" required pattern="^[A-Za-z\s]+$">
+      <span class="error" id="fullNameError"></span>
+        </label>
+
+    <label>Email:
+      <input type="email" id="email" name="email" required>
+      <span class="error" id="emailError"></span>
+    </label>
+
+    <label>Phone Number:
+      <input type="text" id="phone" name="phone" required pattern="^\d{10,15}$">
+      <span class="error" id="phoneError"></span>
+    </label>
+
+    <label>Address:
+      <input type="text" id="address" name="address" required>
+      <span class="error" id="addressError"></span>
+    </label>
+
+    <label>Credit Card Number:
+      <input type="text" id="cardNumber" name="cardNumber" required >
+      <span class="error" id="cardNumberError"></span>
+    </label>
+
+    <label>Expiry Date:
+      <input type="month" id="expiry" name="expiry" required>
+      <span class="error" id="expiryError"></span>
+    </label>
+
+    <label>CVV:
+      <input type="text" id="cvv" name="cvv" required pattern="^\d{3}$">
+      <span class="error" id="cvvError"></span>
+    </label>
+
+    <button type="submit"
+    >Submit</button>
+  </form>
+</div>
+
+<script src="Checkout.js"></script>
+<link rel="stylesheet" href="checkout.css">

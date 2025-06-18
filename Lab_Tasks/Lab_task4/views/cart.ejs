@@ -1,0 +1,35 @@
+<div class="cart-container">
+    <h2>Your Cart</h2>
+
+    <% if (cart && cart.items.length > 0) { %>
+        <% let total = 0; %>
+        <ul class="cart-list">
+            <% cart.items.forEach(item => { 
+                if (item.product) {
+                    let itemTotal = parseFloat(item.product.price) * item.quantity;
+                    total += itemTotal;
+            %>
+                <li class="cart-item">
+                    <img src="<%= item.product.image %>" alt="<%= item.product.name %>" class="product-image" />
+                    <strong><%= item.product.name %></strong>
+                    <span>Qty: <%= item.quantity %></span>
+                    <span>Price: <%= parseFloat(item.product.price).toFixed(2) %></span>
+                    <form action="/cart/remove/<%= item.product._id %>" method="POST" style="display:inline;">
+                        <button type="submit" class="remove-btn">Remove</button>
+                    </form>
+                </li>
+            <% }}); %>
+        </ul>
+
+        <div class="cart-summary">
+            <p><strong>Total:</strong> <%= total.toFixed(2) %></p>
+            <form action="/checkout" method="POST">
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </form>
+        </div>
+    <% } else { %>
+        <p class="empty-cart">Your cart is empty.</p>
+    <% } %>
+</div>
+
+<link rel="stylesheet" href="cart.css">
