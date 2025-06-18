@@ -1,0 +1,62 @@
+.checkout-container {
+  margin-top: 130px; /* Avoid pushing content further down */
+  padding: 20px;
+}
+
+#checkoutForm {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 30px auto;
+  background: #f9f9f9; /* optional: light background */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.error {
+  color: red;
+  font-size: 0.85em;
+}
+
+input.invalid {
+  border: 2px solid red;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
